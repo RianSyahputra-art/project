@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manfaat Berolahraga</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background: linear-gradient(to right, #3178d4, #4d8bdc);
+      color: #333;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    body.dark {
+      background: #121212;
+      color: #f1f1f1;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .header {
+      background: #3178d4;
+      color: rgb(18, 11, 11);
+      padding: 30px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-menu ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    .nav-menu ul li {
+      margin: 0 15px;
+    }
+
+    .nav-menu ul li a {
+      color: #0e090d;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 4px;
+    }
+
+    .nav-menu ul li a:hover, .nav-menu ul li a.active {
+      background-color: #6181c6;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    .article-box {
+      background: #ffffff;
+      padding: 25px;
+      border-left: 6px solid #23354b;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease;
+    }
+
+    .article-box img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    .article-box h2 {
+      margin-bottom: 10px;
+      color: #070a0f;
+    }
+
+    .footer {
+      background: #3178d4;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    form button {
+      background-color: #3178d4;
+      color: rgb(4, 3, 3);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background-color: #2b39b3;
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #3178d4;
+      color: rgb(11, 7, 7);
+      border: none;
+      padding: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      font-size: 18px;
+      z-index: 1000;
+    }
+
+    .toggle-theme {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      background: #609cea;
+      color: rgb(23, 14, 14);
+      border: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    body.dark .header, body.dark .footer {
+      background: #1b1b1b;
+    }
+
+    body.dark .article-box {
+      background: #1f1f1f;
+      border-color: #3178d4
+      ;
+    }
+
+    body.dark .toggle-theme {
+      background: #324469d5;
+    }
+
+    .show {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-theme" onclick="toggleTheme()"><i class="fa-solid fa-moon"></i> Mode Gelap</button>
+
+  <header class="header">
+    <h1>Manfaat Berolahraga</h1>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+        <li><a href="#artikel" class="nav-link">Artikel</a></li>
+        <li><a href="#tentang" class="nav-link">Tentang</a></li>
+        <li><a href="#kontak" class="nav-link">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="beranda" class="article-box">
+      <h2><i class="fa-solid fa-leaf"></i> Selamat Datang!</h2>
+      <p>Majalah Ini Membahas Manfaat Berolahraga Bagi Kesehatan.</p>
+      <img src="olahraga.jpg" alt="Energi Terbarukan">
+    </section>
+
+    <section id="artikel" class="article-box">
+      <h2><i class="fa-solid fa-solar-panel"></i> Menjaga Kesehatan jantung</h2>
+      <p>Olahraga sangat bermanfaat bagi kesehatan jantung karena meningkatkan kekuatan otot jantung, menurunkan tekanan darah, meningkatkan sirkulasi darah, dan mengurangi risiko berbagai penyakit jantung.</p>
+      <img src="jantung.jpg" alt="Menjag kesehatan jantung" >
+    </section>
+
+    <section class="article-box">
+      <h2><i class="fa-solid fa-wind"></i> Menjauhkan dari bermacam- macam penyakit</h2>
+      <p>hasiat awal dari berolahraga merupakan tingkatkan energi tahan badan supaya tidak gampang terkena penyakit. Kathleen Zelman, MPH, RD, LD, direktur kesehatan WebMD, menarangkan kala berolahraga badan hendak lebih leluasa bergerak..</p>
+      <img src="images.jpg" alt="Menjauhkan dari bermacam- macam penyakit">
+    </section>
+
+    <section id="tentang" class="article-box">
+      <h2><i class="fa-solid fa-info-circle"></i> Tentang Kami</h2>
+      <p>Kami adalah tim yang peduli akan kesehatan dan ingin mengedukasi masyarakat tentang pentingnya berolahraga secara rutin guna menjaga kesehatan tubuh dan terhindar dari berbagai penyakit.</p>
+    </section>
+
+    <section id="kontak" class="article-box">
+      <h2><i class="fa-solid fa-envelope"></i> Hubungi Kami</h2>
+      <form>
+        <input type="text" placeholder="Nama Anda" required>
+        <input type="email" placeholder="Email Anda" required>
+        <textarea rows="4" placeholder="Pesan Anda" required></textarea>
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Majalah Manfaat Berolahraga. All rights reserved.</p>
+  </footer>
+
+  <button id="scrollTopBtn" title="Kembali ke atas"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    // Scroll top
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    scrollBtn.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+
+    // Nav active
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+      let fromTop = window.scrollY + 100;
+      navLinks.forEach(link => {
+        let section = document.querySelector(link.getAttribute("href"));
+        if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+          navLinks.forEach(l => l.classList.remove("active"));
+          link.classList.add("active");
+        }
+      });
+    });
+
+    // Animasi scroll masuk
+    const boxes = document.querySelectorAll('.article-box');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    boxes.forEach(box => observer.observe(box));
+
+    // Toggle Dark Mode
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+
+</body>
+</html>
